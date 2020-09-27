@@ -1,0 +1,116 @@
+<h2>Ajouter un film</h2>
+<form (ngSubmit)="addMovie()" [formGroup]="movieForm">
+
+  <!-- Title -->
+  <input 
+    type="text"
+    placeholder="Titre"
+    formControlName="title" />
+
+  <div class="error-form" *ngIf="movieForm.get('title').dirty && movieForm.get('title').hasError('required')">
+    Vous devez renseigner un titre
+  </div>
+  <div class="error-form" *ngIf="movieForm.get('title').dirty && movieForm.get('title').hasError('minlength')">
+    Le titre doit faire au moins 3 caractères
+  </div>
+
+  <!-- Year -->
+  <input 
+    type="number"
+    placeholder="Année"
+    formControlName="year" />
+
+  <div class="error-form" *ngIf="movieForm.get('year').dirty && movieForm.get('year').hasError('required')">
+    Vous devez renseigner une année (AAAA)
+  </div>
+  <div class="error-form" *ngIf="movieForm.get('year').dirty && movieForm.get('year').hasError('min')">
+    L'année ne peut pas être inférieure à 1900
+  </div>
+  <div class="error-form" *ngIf="movieForm.get('year').dirty && movieForm.get('year').hasError('max')">
+    L'année ne peut pas être supérieure à l'année en cours
+  </div>
+
+  <!-- Runtime -->
+  <input 
+    type="text"
+    placeholder="Durée (min)"
+    formControlName="runtime" />
+
+  <div class="error-form" *ngIf="movieForm.get('runtime').dirty && movieForm.get('runtime').hasError('required')">
+    Vous devez renseigner une durée (MIN min)
+  </div>
+
+  <!-- Genre -->
+  <input 
+    type="text"
+    placeholder="Genre"
+    formControlName="genre" />
+
+  <div class="error-form" *ngIf="movieForm.get('genre').dirty && movieForm.get('genre').hasError('required')">
+    Vous devez renseigner un genre
+  </div>
+
+  <!-- Director -->
+  <input 
+    type="text"
+    placeholder="Réalisateur"
+    formControlName="director" />
+
+  <div class="error-form" *ngIf="movieForm.get('director').dirty && movieForm.get('director').hasError('required')">
+    Vous devez renseigner un réalisateur
+  </div>
+
+  <!-- Actors -->
+  <input 
+    type="text"
+    placeholder="Acteurs"
+    formControlName="actors" />
+
+  <div class="error-form" *ngIf="movieForm.get('actors').dirty && movieForm.get('actors').hasError('required')">
+    Vous devez renseigner au moins un acteur
+  </div>
+
+  <!-- Plot -->
+  <input 
+    type="text"
+    placeholder="Synopsis"
+    formControlName="plot" />
+
+  <div class="error-form" *ngIf="movieForm.get('plot').dirty && movieForm.get('plot').hasError('required')">
+    Vous devez renseigner un synopsis
+  </div>
+
+  <!-- Poster -->
+  <input 
+    type="text"
+    placeholder="Lien de l'image"
+    formControlName="poster" />
+  
+  <div class="error-form" *ngIf="movieForm.get('poster').dirty && movieForm.get('poster').hasError('pattern')">
+    Vous devez renseigner un lien valide
+  </div>
+
+  <!-- Rating -->
+  <input 
+    type="number"
+    placeholder="Notation"
+    formControlName="imdbRating" />
+
+  <div class="error-form" *ngIf="movieForm.get('imdbRating').dirty && movieForm.get('imdbRating').hasError('required')">
+    Vous devez renseigner une note sur 10
+  </div>
+  <div class="error-form" *ngIf="movieForm.get('imdbRating').dirty && movieForm.get('imdbRating').hasError('min')">
+    La note ne peut pas être inférieure à 0
+  </div>
+  <div class="error-form" *ngIf="movieForm.get('imdbRating').dirty && movieForm.get('imdbRating').hasError('max')">
+      La note ne peut pas être supérieure à 10
+  </div>
+
+  <!-- Submit -->
+  <input 
+    class="btn btn-trailer" 
+    type="submit"
+    [disabled]="movieForm.invalid" 
+    value="Ajouter" />
+
+</form>

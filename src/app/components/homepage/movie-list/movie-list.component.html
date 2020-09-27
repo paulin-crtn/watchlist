@@ -1,0 +1,16 @@
+<div class="sort-movies">
+    <span class="bold">Trier par</span>
+    <span (click)="emitTypeOrder('dates'); changeActiveNav('dates');" class="sort sort-active" id="order-by-dates">Date d'ajout</span>
+    <span (click)="emitTypeOrder('titles'); changeActiveNav('titles');" class="sort" id="order-by-titles">Titre</span>
+    <span (click)="emitTypeOrder('ratings'); changeActiveNav('ratings');" class="sort" id="order-by-ratings">Notation</span>
+</div>
+<div class="movies-container">
+    <div class="movie" *ngFor="let movie of movies">
+        <a routerLink="/movie/{{movie.id}}">
+            <figure [ngClass]="{viewed: movie.viewed}">
+                <img src="{{movie.poster}}" alt="image film {{movie.title}}">
+                <figcaption>{{ movie.title | titlecase }}</figcaption>
+            </figure>
+        </a>
+    </div>
+</div>

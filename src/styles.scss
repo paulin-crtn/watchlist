@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    min-height: 100vh;
+    padding: 30px 50px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 200;
+    color: #ffffff;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 10px 15px;
+}
+
+.btn:disabled{
+    opacity: 0.5;
+}
+
+.btn-trailer{
+    color: #ffffff;
+    background-color: #FF4D4D;
+}
+
+.btn-primary{
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.btn-delete{
+    color: #ffffff;
+    background-color: #000000;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.bold{
+    font-weight: 400;
+}
+
+button:focus{
+    outline: 0;
+}

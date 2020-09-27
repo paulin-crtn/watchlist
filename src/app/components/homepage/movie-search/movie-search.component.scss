@@ -1,0 +1,50 @@
+/* SEARCHBAR */
+
+.searchbar{
+    text-align: center;
+    input{
+        width: 40%;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 1.3rem;
+        margin-top: 35px;
+    }
+}
+
+.no-result{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    a{
+        text-decoration: underline;
+    }
+}
+
+/* SUGGESTIONS */
+
+.suggestions-movies{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 37%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    text-align: center;
+    z-index: 200;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.suggestion-title{
+    display: inline-block;
+    color: #252525;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-title:hover{
+    color: #FFB93B;
+}

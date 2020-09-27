@@ -1,0 +1,32 @@
+h2{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+form{
+    width: 60%;
+    margin: 30px auto;
+}
+
+input{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:not([type="submit"]){
+    padding: 5px 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    line-height: 40px;
+}
+
+input[type="submit"]{
+    margin-top: 20px;
+}
+
+.error-form{
+    margin: 10px 0;
+}

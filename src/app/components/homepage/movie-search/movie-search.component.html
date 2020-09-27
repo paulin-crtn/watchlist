@@ -1,0 +1,15 @@
+<div class="searchbar">
+    <input 
+    class="search"
+    type="text" 
+    [formControl]="inputMovies"
+    placeholder="Rechercher un film" />
+</div>
+
+<div class="suggestions-movies" *ngIf="moviesResponse.length">
+  <div *ngFor="let suggestion of moviesResponse">
+    <a class="suggestion-title" (click)="requestMovie(suggestion.imdbID)">{{ suggestion.Title }}</a>
+  </div>
+</div>
+
+<div class="no-result" *ngIf="noResult">Votre recherche n'a retourné aucun résultat, <a [routerLink]="['/movie/add', {movieTitle: inputMovies.value}]">ajouter manuellement</a></div>

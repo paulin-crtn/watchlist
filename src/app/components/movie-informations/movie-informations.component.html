@@ -1,0 +1,24 @@
+<div class="movie-detail-container">
+    <a class="navigation" routerLink="/movie/{{previousMovieId}}"><img src="./assets/images/svg/002-back.svg" alt="previous movie"></a>
+    <div class="movie-container">
+      <figure [ngClass]="{viewed: movie.viewed}">
+        <img src="{{ movie.poster }}" alt="image film {{ movie.title }}">
+      </figure>
+      <div class="movie-info">
+        <div class="buttons">
+            <a href="https://www.youtube.com/results?search_query=trailer+{{youtubeQuery}}" class="btn btn-trailer" target="_blank"><i class="far fa-play-circle"></i>Bande annonce</a>
+            <a class="btn btn-primary" (click)="toggleViewed()">{{ movie.viewed ? 'Revoir' : 'Marquer comme vu' }}</a>
+            <a class="btn btn-delete" (click)="deleteMovie()">Supprimer</a>
+        </div>
+        <h2>{{ movie.title | titlecase }}</h2>
+        <span class="rating"><i class="fas fa-star"></i>{{ movie.imdbRating }}<span class="denominator">/10</span></span>
+        <div class="movie-data">
+            <p><span>{{ movie.runtime }} min</span> | <span>{{ movie.genre }}</span> | <span>{{ movie.year }}</span></p>
+            <p><span class="bold">De </span>{{ movie.director }}</p>
+            <p><span class="bold">Avec </span><span>{{ movie.actors }}</span></p>
+        </div>
+        <p class="movie-plot">{{ movie.plot }}</p>
+      </div>
+    </div>
+    <a class="navigation" routerLink="/movie/{{nextMovieId}}"><img src="./assets/images/svg/001-next.svg" alt="next movie"></a>
+</div>
