@@ -58,8 +58,8 @@ export class MovieSearchComponent implements OnInit {
           // Avoid Case issue
           title: response.Title,
           year: response.Year,
-          runtime: response.Runtime,
-          genre: response.Title,
+          runtime: response.Runtime.replace(/\D/g,''),
+          genre: response.Genre,
           director: response.Director,
           actors: response.Actors,
           plot: response.Plot,
