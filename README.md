@@ -6,7 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This is a training project created to learn Angular basics. [OMDb's API](http://www.omdbapi.com) is used.
 
-![Screenshot](/screenshot.png)
+![Screenshot](/screenshot-1.png)
+![Screenshot](/screenshot-2.png)
 
 ## Development server
 
