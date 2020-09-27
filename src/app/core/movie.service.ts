@@ -45,9 +45,7 @@ export class MovieService {
 
     deleteMovie(id: number) {
         const index = mockMovies.findIndex(movie => movie.id === id);
-        mockMovies.splice(index, 1);
-        console.log(mockMovies);
-        
+        mockMovies.splice(index, 1); 
     }
 
     getMovie(id: number): Movie {

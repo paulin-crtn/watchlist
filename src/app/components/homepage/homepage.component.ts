@@ -13,7 +13,7 @@ import { MovieService } from 'src/app/core/movie.service';
 export class HomepageComponent implements OnInit {
 
   movies: Movie[];
-  // USED BY ORDERBY FUNCTION
+  // USE BY ORDER BY FUNCTION
   type: string = 'dates';
   ascendingDates = false;
   ascendingTitles = true;
@@ -26,7 +26,7 @@ export class HomepageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // SET PAGETITLE AND META
+    // SET PAGE TITLE AND META
     this.titleService.setTitle('Liste de films à regarder | Watchlist');
     this.metaService.addTags([
       {name: 'description', content: 'Recherche un nouveau film à regarder ou sélectionne en un dans ta liste.'},
@@ -51,6 +51,7 @@ export class HomepageComponent implements OnInit {
         this.ascendingRatings = !this.ascendingRatings;
         break;
     }
+    // Order
     this.orderBy();
   }
 
